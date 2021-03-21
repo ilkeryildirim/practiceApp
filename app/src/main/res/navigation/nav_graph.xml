@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/discoverFragment">
+    <fragment
+        tools:layout="@layout/fragment_products"
+        android:id="@+id/productsFragment"
+        android:name="com.ilkeryildirim.vitrinova.ui.products.ProductsFragment"
+        android:label="ProductsFragment" />
+    <fragment
+        tools:layout="@layout/fragment_discover"
+        android:id="@+id/discoverFragment"
+        android:name="com.ilkeryildirim.vitrinova.ui.discover.DiscoverFragment"
+        android:label="DiscoverFragment" >
+        <action
+            android:id="@+id/action_discoverFragment_to_productsFragment"
+            app:popUpToInclusive="true"
+        app:popUpTo="@id/home_detail_fragment"
+        app:destination="@id/productsFragment" />
+
+    </fragment>
+
+</navigation>
